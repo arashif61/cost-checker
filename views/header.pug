@@ -1,0 +1,28 @@
+header.sticky-top
+  .bg-dark.pb-2
+    .container 
+      .d-flex.flex-wrap.align-items-center.justify-content-center.justify-content-lg-start
+        .d-flex.align-items-center.my-2.my-lg-0.me-lg-auto.text-white.text-decoration-none
+          .h1 cost-checker
+        ul.nav.col-12.col-lg-auto.my-2.justify-content-center.my-md-0.text-small
+          li.mx-3 
+            a(href="./" class=presentPage == "home" ? "text-secondary" : "text-white")
+              i.bi.bi-house.d-block.mx-auto.header-icon
+              span ホーム
+          li.mx-3
+            a(href="./deposit-list" class=presentPage == "deposit" ? "text-secondary" : "text-white")
+              i.bi.bi-piggy-bank.d-block.mx-auto.header-icon
+              span 入金
+          li.mx-3
+            a(href="./payment-list" class=presentPage == "payment" ? "text-secondary" : "text-white")
+              i.bi.bi-cash-stack.d-block.mx-auto.header-icon
+              span 出金
+          li.mx-3
+            a(href="./water-list" class=presentPage == "water" ? "text-secondary" : "text-white")
+              i.bi.bi-droplet.d-block.mx-auto.header-icon
+              span 水道
+          li.mx-3
+            a(href="./settings" class=presentPage == "settings" ? "text-secondary" : "text-white")
+              i.bi.bi-gear.d-block.mx-auto.header-icon
+              span 設定
+            

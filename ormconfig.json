@@ -1,0 +1,26 @@
+{
+    "synchronize": true,
+    "logging": false,
+    "type": "sqlite",
+    "database": "main.db",
+    "entities": [
+        "entity/MPayGenre.ts",
+        "entity/MUser.ts",
+        "entity/TBalance.ts",
+        "entity/TDeposit.ts",
+        "entity/TLastUpdateTime.ts",
+        "entity/TPayment.ts",
+        "entity/TWaterBill.ts"
+    ],
+    "migrations": [
+        "src/migration/**/*.ts"
+    ],
+    "subscribers": [
+        "src/subscriber/**/*.ts"
+    ],
+    "cli": {
+        "entitiesDir": "src/entity",
+        "migrationsDir": "src/migration",
+        "subscribersDir": "src/subscriber"
+    }
+}

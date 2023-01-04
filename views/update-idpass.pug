@@ -1,0 +1,25 @@
+form(action="update-idpass", method="post") 
+  .h2 各サイトID/PASS更新
+  .mb-4
+    .h4 SBIネット銀行
+    .row
+      .col
+        label(for="sbi-userid").form-label ユーザーID
+        input.form-control#sbi-userid(type="text" name="sbiUserId" value=sbiUserId class=errMsg.sbiUserId != "" ? "is-invalid" : "")
+        .invalid-feedback(class=errMsg.sbiUserId != "" ? "" : "d-none") #{errMsg.sbiUserId}
+      .col
+        label(for="sbi-password").form-label パスワード
+        input.form-control#sbi-password(type="password" name="sbiPassword" value=sbiPassword class=errMsg.sbiPassword != "" ? "is-invalid" : "")
+        .invalid-feedback(class=errMsg.sbiPassword != "" ? "" : "d-none") #{errMsg.sbiPassword}
+  .mb-3
+    .h4 東京都水道局
+    .row
+      .col
+        label(for="tokyowater-userid").form-label ユーザーID
+        input.form-control#tokyowater-userid(type="text" name="waterUserId" value=waterUserId class=errMsg.waterUserId != "" ? "is-invalid" : "")
+        .invalid-feedback(class=errMsg.waterUserId != "" ? "" : "d-none") #{errMsg.waterUserId}
+      .col
+        label(for="tokyowater-password").form-label パスワード
+        input.form-control#tokyowater-password(type="password" name="waterPassword" value=waterPassword class=errMsg.waterPassword != "" ? "is-invalid" : "")
+        .invalid-feedback(class=errMsg.waterPassword != "" ? "" : "d-none") #{errMsg.waterPassword}
+  button(type="submit" name="update-idpass").btn.btn-primary 更新

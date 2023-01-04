@@ -1,0 +1,8 @@
+{
+    "neobankDepositUrl": "https://www.netbk.co.jp/contents/pages/wpl020201/i020201CT/DI02020100",
+    "neobankDebitUrl": "https://www.netbk.co.jp/contents/pages/wpl020810/i020810CT/DI02081000?CallerScreen=2",
+    "waterUrl": "https://www.suidoapp.waterworks.metro.tokyo.lg.jp/#/waterPrice",
+    "csvDirPath": "/Users/hoge/Downloads/csvTempFiles/",
+    "timeoutMs": 20000,
+    "portNumber": 3000
+}

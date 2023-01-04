@@ -1,0 +1,24 @@
+extends ./layout.pug
+block vars 
+  - var presentPage = "deposit"
+block title
+  title 入金一覧 | cost-checker
+
+block content
+  .container-fluid
+    .h2 入金一覧
+    if depositList.length==0
+      .alert.alert-warning データなし
+    else 
+      table.table.table-sm
+        thead
+          tr
+            th 日付
+            th 金額
+            th 振込元
+        tbody
+          each depositRow in depositList
+            tr
+              td #{depositRow.date}
+              td ¥#{depositRow.price.toLocaleString()}
+              td #{depositRow.transferer}

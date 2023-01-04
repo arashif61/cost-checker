@@ -1,0 +1,30 @@
+extends ./layout.pug
+block vars 
+  - var presentPage = "home"
+block title
+  title ホーム | cost-checker
+block script 
+  script(src="index.js") 
+
+block content
+  .container-fluid
+    #updateStatus.alert.alert-success.mb-2.d-none(role="alert") 更新完了しました。開き直しています...
+    div
+      span.h2.me-2 残高
+      span.h1 ¥#{balance.toLocaleString()}
+    div
+      span.h2.me-2 #{thisMonth}月の支出額
+      span.h1 ¥#{thisMonthPaymentSum.toLocaleString()}
+    div
+      span.h2.me-2 #{thisMonth}月の収入額
+      span.h1 ¥#{thisMonthDepositSum.toLocaleString()}
+    .mt-4.mb-1
+      button#updateButton.btn.btn-primary.me-3(onclick="updateButtonClick()") 
+        span#updateButtonSpinner.spinner-border.spinner-border-sm.d-none.me-1(role="status" aria-hidden="true")
+        span#updateButtonText データを更新する
+    .small
+      span.me-2 最終更新日時:
+      if lastUpdateTime == ""
+        span 更新なし
+      else 
+        span #{lastUpdateTime}

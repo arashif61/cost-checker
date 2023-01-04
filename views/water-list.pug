@@ -1,0 +1,25 @@
+extends ./layout.pug
+block vars 
+  - var presentPage = "water"
+block title
+  title 水道料金一覧 | cost-checker
+
+block content
+  .container-fluid
+    .h2 水道料金一覧
+    if waterList.length==0
+      .alert.alert-warning データなし
+    else 
+      table.table.table-sm
+        thead
+          tr
+            th 年月
+            th 使用量
+            th 金額
+        tbody
+          each waterRow, index in waterList
+            tr
+              td #{waterRow.ym_from} - #{waterRow.ym_to}
+              td #{waterRow.usage}m
+                sup 3
+              td ¥#{waterRow.price.toLocaleString()}
